@@ -55,7 +55,7 @@ This project highlights how data analysis and basic financial modeling can bring
 
 ##Screenshot
 
-![Housing Hours Chart](./screenshot.png) *(Add a chart image here if uploading one to the repo)*
+![Housing Hours Chart](./screenshot.png) 
 
 
 ##Tech Stack
