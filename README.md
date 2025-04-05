@@ -1,69 +1,65 @@
-# Housing Affordability Analysis – Living Wage in Los Angeles
+Housing Affordability Simulation in Los Angeles (Python)
 
-This project simulates the financial burden of rent on six different working-class families living in Los Angeles, using realistic income scenarios and the widely accepted 30% income-to-rent affordability rule.
+This project uses Python to simulate housing affordability for six working-class families in Los Angeles, based on income scenarios and rent expectations. Inspired by a Math & Social Justice class assignment, the analysis applies the 30% rent-to-income affordability rule to assess whether California’s minimum wage of $16/hour supports fair housing in LA’s high-cost environment.
 
-The goal is to assess whether California's minimum wage of $16/hour is sufficient to support affordable housing in LA, and to calculate how many hours each family would need to work weekly to meet that affordability threshold.
+Financial Models Used
+30% Rule: Rent is affordable if it does not exceed 30% of monthly income
 
+Wage Conversion: Monthly income calculated using hourly wage × weekly hours × 4.33
 
-##Project Overview
+Affordability Check: Compared required affordable rent (30% of income) to actual expected rent
 
-Each family has unique income circumstances, including full-time minimum wage, tipped income, partial employment, and dual-income households. Their rent expectations are based on fair market values for studios and 2-bedroom apartments in the LA area.
+Work Hours Estimation: Calculated weekly hours needed at $16/hour to afford rent per the 30% guideline
 
-The analysis calculates:
+Data Source
+This project uses realistic synthetic data created from:
 
-- Total monthly income for each family
-- The amount of income required for rent to remain at or below 30%
-- Whether housing is affordable under current wages
-- Weekly work hours required to meet that threshold
+California minimum wage (2024): $16/hour
 
+Family income profiles and rent expectations: Based on classroom scenarios reflecting tipped workers, dual-income households, part-time workers with scholarships, and wage inequality
 
-##Data Sources
+Fair Market Rent estimates in LA County (e.g., studio = $1,777; 2-bedroom = $2,544)
 
-The rent prices, wages, and scenarios reflect **realistic but synthetic data**, modeled after actual housing conditions and wage structures in Los Angeles County.
+Family Outcomes & Metrics
+Based on the simulation, here’s how each family fares under the 30% rule:
 
-- **Wage Source:** California 2024 minimum wage ($16.00/hr)
-- **Rent Estimates:** Based on Fair Market Rent values for LA from HUD
-- **Scenarios:** Class-provided family profiles simulating real economic challenges
+🔴 Red Family: $2,560/mo income
+▸ Affordable rent = $768
+▸ Expected rent = $1,777 → Unaffordable
+▸ Needs ~86 hours/week at $16/hr to afford
 
+🟢 Green Family: $3,040/mo income (wages + tips)
+▸ Affordable rent = $1,011
+▸ Expected rent = $1,777 → Unaffordable
+▸ Needs ~103 hours/week
 
-##Financial Modeling Used
+🔵 Blue Family: $5,120/mo income (father earns 2× min wage)
+▸ Affordable rent = $1,538
+▸ Expected rent = $2,544 → Unaffordable
+▸ Needs ~138 hours/week if only one parent works
 
-- **30% Rule**: Housing is considered affordable if rent is 30% or less of gross monthly income
-- **Hourly Wage to Monthly Income Conversion**: `hourly_wage * weekly_hours * 4.33`
-- **Affordability Check**: Compares 30% income threshold against actual rent
-- **Hours Needed**: Calculates the number of work hours needed to meet the threshold
+🟡 Yellow Family: $2,560/mo income (64% of typical wage)
+▸ Affordable rent = $820
+▸ Expected rent = $1,777 → Unaffordable
+▸ Needs ~93 hours/week
 
+🟠 Orange Family: $2,960/mo (part-time + scholarship)
+▸ Affordable rent = $888
+▸ Expected rent = $1,777 → Unaffordable
+▸ Needs ~103 hours/week
 
-##Results Summary
+🟣 Purple Family: $5,520/mo (2 adults @ $17.25/hr)
+▸ Affordable rent = $1,656
+▸ Expected rent = $2,544 → Unaffordable, but closest
+▸ Needs ~92 hours/week
 
-- Most families are **unable to afford their expected apartment type** based on minimum wage or current earnings
-- Several families would need to work **60–90+ hours/week** to meet the affordability standard
-- Only 2 out of 6 families met the 30% guideline
-- This reinforces that $16/hour is not enough for fair housing in high-cost areas like LA
+Key Metric: 0 out of 6 families could afford rent while working full-time at or near minimum wage, based on the 30% rule.
 
+Observations from the Chart
+Using the generated bar chart, it’s visually clear that all families would need to work well over 40 hours/week to afford rent — some requiring 80 to 140 hours/week. The Blue Family and Yellow Family show the highest burden due to single-income dependency and wage disparities.
 
-##Files Included
+Conclusion
+This simulation highlights the severe mismatch between minimum wage levels and housing costs in Los Angeles. Even with two earners or supplemental income (like tips or scholarships), families are unable to meet the 30% affordability rule without extreme work schedules.
 
-- `Housing_Affordability_Analysis.py`: Full Python code used for simulation and visualization
-- Chart showing required hours/week for each family to meet the 30% rent rule
+This analysis supports the conclusion that California’s current minimum wage does not meet the housing demands of its working families. Without wage increases, housing subsidies, or broader systemic reforms, the cost of living in high-demand areas like LA will continue to be unsustainable for low- and middle-income households.
 
-
-##Conclusion
-
-This project highlights how data analysis and basic financial modeling can bring social justice issues into focus. The reality faced by working families in LA reveals a significant gap between policy (minimum wage) and reality (housing costs).
-
-
-##Screenshot
-
-![Housing Hours Chart](./screenshot.png) 
-
-
-##Tech Stack
-
-- Python 3
-- NumPy
-- Pandas
-- Matplotlib
-
-
-> Built by Amaan Azim 
