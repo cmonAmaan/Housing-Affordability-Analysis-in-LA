@@ -19,7 +19,7 @@ The analysis calculates:
 
 ##Data Sources
 
-The rent prices, wages, and scenarios were derived from a **Living Wage Fair Housing assignment** from a Math & Social Justice course. They reflect **realistic but synthetic data**, modeled after actual housing conditions and wage structures in Los Angeles County.
+The rent prices, wages, and scenarios reflect **realistic but synthetic data**, modeled after actual housing conditions and wage structures in Los Angeles County.
 
 - **Wage Source:** California 2024 minimum wage ($16.00/hr)
 - **Rent Estimates:** Based on Fair Market Rent values for LA from HUD
