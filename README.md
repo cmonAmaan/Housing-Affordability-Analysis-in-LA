@@ -1,6 +1,6 @@
 Housing Affordability Simulation in Los Angeles
 
-This project uses Python to simulate housing affordability for six working-class families in Los Angeles, based on income scenarios and rent expectations. Inspired by a Math & Social Justice class assignment, the analysis applies the 30% rent-to-income affordability rule to assess whether California’s minimum wage of $16/hour supports fair housing in LA’s high-cost environment.
+This project uses Python to simulate housing affordability for six working-class families in Los Angeles, based on income scenarios and rent expectations. Inspired by social justice reasons, the analysis applies the 30% rent-to-income affordability rule to assess whether California’s minimum wage of $16/hour supports fair housing in LA’s high-cost environment.
 
 Financial Models Used
 30% Rule: Rent is affordable if it does not exceed 30% of monthly income
